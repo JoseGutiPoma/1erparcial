@@ -729,3 +729,8 @@ textarea {
 .text-center {
     text-align: center;
 }
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}

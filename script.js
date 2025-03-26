@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Simulate form submission
             const submitButton = this.querySelector('button[type="submit"]');
-            submitButton.textContent = 'Registering...';
+            submitButton.textContent = 'Registrando...';
             submitButton.disabled = true;
             
             setTimeout(function() {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reset form
             registrationForm.reset();
             const submitButton = registrationForm.querySelector('button[type="submit"]');
-            submitButton.textContent = 'Register Now';
+            submitButton.textContent = 'Registrarse Ahora';
             submitButton.disabled = false;
         });
     }
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Simulate form submission
             const submitButton = this.querySelector('button[type="submit"]');
-            submitButton.innerHTML = 'Sending...';
+            submitButton.innerHTML = 'Enviando...';
             submitButton.disabled = true;
             
             setTimeout(function() {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reset form
             contactForm.reset();
             const submitButton = contactForm.querySelector('button[type="submit"]');
-            submitButton.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+            submitButton.innerHTML = 'Enviar Mensaje <i class="fas fa-paper-plane"></i>';
             submitButton.disabled = false;
         });
     }
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ctx.fillStyle = '#1f2937';
                 ctx.font = 'bold 14px Arial';
                 ctx.textAlign = 'center';
-                ctx.fillText('Tech Innovation Center', 350, 200 + 60);
+                ctx.fillText('Centro de Innovación Tecnológica', 350, 200 + 60);
                 
                 // Add a pin icon
                 ctx.fillStyle = '#ec4899';
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ctx.font = 'bold 12px Arial';
                 ctx.fillText('N', 50, 30);
                 ctx.fillText('S', 50, 75);
-                ctx.fillText('W', 25, 54);
+                ctx.fillText('O', 25, 54);
                 ctx.fillText('E', 75, 54);
                 
                 // Add a scale
@@ -257,4 +257,20 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
