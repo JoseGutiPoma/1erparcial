@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovate 2025 - Evento de Innovación y Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">INNOVATE 2025</h1>
+            <p class="hero-subtitle">Where visionaries shape tomorrow's technology. Join us for the most anticipated tech event of the year.</p>
+            <button class="btn btn-primary">Register Now <i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Event Info -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About the Event</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="info-cards">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-calendar-days"></i>
+                        <h3>Date & Time</h3>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-text-lg">June 15-17, 2025</p>
+                        <p class="card-text-sm">9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-map-pin"></i>
+                        <h3>Location</h3>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-text-lg">Tech Innovation Center</p>
+                        <p class="card-text-sm">123 Future Avenue, Silicon Valley</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Attendees</h3>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-text-lg">5,000+ Innovators</p>
+                        <p class="card-text-sm">From 50+ Countries</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="event-description">
+                <p>
+                    Innovate 2025 brings together the brightest minds in technology, business, and design to explore 
+                    cutting-edge innovations that will shape our future. From AI and quantum computing to sustainable 
+                    tech and digital transformation, this three-day event offers unparalleled networking, learning, 
+                    and collaboration opportunities.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Register Now</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Secure your spot at the most anticipated tech event of 2025. Early bird registration ends March 31st.
+                </p>
+            </div>
+            
+            <div class="form-container">
+                <div class="card" id="registration-card">
+                    <div class="card-header">
+                        <h3>Registration Form</h3>
+                        <p class="card-subtitle">Fill out the form below to secure your spot</p>
+                    </div>
+                    <div class="card-content">
+                        <form id="registration-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company" placeholder="Acme Inc.">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">Register Now</button>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-footer-text">
+                            By registering, you agree to our Terms of Service and Privacy Policy. 
+                            We'll send you event updates via email.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card success-card hidden" id="registration-success">
+                    <div class="card-content text-center">
+                        <i class="fas fa-check-circle success-icon"></i>
+                        <h3>Registration Successful!</h3>
+                        <p>
+                            Thank you for registering for Innovate 2025. We've sent a confirmation email to your inbox.
+                        </p>
+                        <button class="btn btn-outline" id="register-another">Register Another Person</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Program -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Event Program</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Explore our comprehensive program featuring keynotes, workshops, panel discussions, and networking events.
+                </p>
+            </div>
+            
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="day1">Day 1 - June 15</button>
+                    <button class="tab-btn" data-tab="day2">Day 2 - June 16</button>
+                    <button class="tab-btn" data-tab="day3">Day 3 - June 17</button>
+                </div>
+                
+                <div class="tab-content active" id="day1">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Opening Day: Future Foundations</h3>
+                            <p class="card-subtitle">Exploring the building blocks of tomorrow's technology</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <i class="fas fa-clock"></i>
+                                        <span>9:00 AM - 10:30 AM</span>
+                                        <span class="accordion-title">Opening Keynote: The Next Decade of Innovation</span>
+                                        <i class="fas fa-chevron-down accordion-icon"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <div class="accordion-details">
+                                            <p><strong>Speaker:</strong> Dr. Elena Rodriguez, Chief Futurist</p>
+                                            <p><strong>Location:</strong> Main Auditorium</p>
+                                            <p>
+                                                Dr. Rodriguez will explore the major technological shifts expected in the next decade and how they will 
+                                                transform industries, societies, and our daily lives. From quantum computing to brain-computer interfaces, 
+                                                discover what's on the horizon.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <i class="fas fa-clock"></i>
+                                        <span>11:00 AM - 12:30 PM</span>
+                                        <span class="accordion-title">Panel: Sustainable Tech for a Changing Climate</span>
+                                        <i class="fas fa-chevron-down accordion-icon"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <div class="accordion-details">
+                                            <p><strong>Moderator:</strong> James Chen, Environmental Tech Journalist</p>
+                                            <p><strong>Location:</strong> Green Forum Hall</p>
+                                            <p>
+                                                Leading experts discuss how technology can address climate challenges, from renewable energy innovations 
+                                                to carbon capture breakthroughs and sustainable computing practices.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <i class="fas fa-clock"></i>
+                                        <span>2:00 PM - 5:00 PM</span>
+                                        <span class="accordion-title">Workshop: AI Development for Beginners</span>
+                                        <i class="fas fa-chevron-down accordion-icon"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <div class="accordion-details">
+                                            <p><strong>Instructor:</strong> Maya Patel, AI Research Lead</p>
+                                            <p><strong>Location:</strong> Workshop Room A</p>
+                                            <p>
+                                                A hands-on introduction to artificial intelligence development. Participants will learn the basics of 
+                                                machine learning models and build their first AI application. No prior experience required.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="day2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Day 2: Deep Dive</h3>
+                            <p class="card-subtitle">Technical sessions and specialized tracks</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <i class="fas fa-clock"></i>
+                                        <span>9:00 AM - 10:30 AM</span>
+                                        <span class="accordion-title">Keynote: Quantum Computing Revolution</span>
+                                        <i class="fas fa-chevron-down accordion-icon"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <div class="accordion-details">
+                                            <p><strong>Speaker:</strong> Dr. Hiroshi Tanaka, Quantum Research Director</p>
+                                            <p><strong>Location:</strong> Main Auditorium</p>
+                                            <p>
+                                                An exploration of the latest breakthroughs in quantum computing and how they will transform 
+                                                cryptography, drug discovery, materials science, and artificial intelligence.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <i class="fas fa-clock"></i>
+                                        <span>11:00 AM - 5:00 PM</span>
+                                        <span class="accordion-title">Hackathon: Solutions for Smart Cities</span>
+                                        <i class="fas fa-chevron-down accordion-icon"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <div class="accordion-details">
+                                            <p><strong>Facilitator:</strong> Urban Tech Alliance</p>
+                                            <p><strong>Location:</strong> Innovation Lab</p>
+                                            <p>
+                                                Teams will collaborate to develop innovative solutions for urban challenges using IoT, 
+                                                data analytics, and smart infrastructure technologies. Prizes for the top solutions!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="day3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Day 3: Future Forward</h3>
+                            <p class="card-subtitle">Visionary sessions and closing events</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <i class="fas fa-clock"></i>
+                                        <span>9:00 AM - 10:30 AM</span>
+                                        <span class="accordion-title">Panel: The Ethics of Emerging Technologies</span>
+                                        <i class="fas fa-chevron-down accordion-icon"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <div class="accordion-details">
+                                            <p><strong>Moderator:</strong> Prof. Sarah Johnson, Tech Ethics Chair</p>
+                                            <p><strong>Location:</strong> Ethics Forum</p>
+                                            <p>
+                                                Leading ethicists and technologists discuss the moral implications of AI, genetic engineering, 
+                                                brain interfaces, and surveillance technologies.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <i class="fas fa-clock"></i>
+                                        <span>11:00 AM - 12:30 PM</span>
+                                        <span class="accordion-title">Startup Showcase: Tomorrow's Unicorns</span>
+                                        <i class="fas fa-chevron-down accordion-icon"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <div class="accordion-details">
+                                            <p><strong>Host:</strong> Venture Capital Consortium</p>
+                                            <p><strong>Location:</strong> Startup Pavilion</p>
+                                            <p>
+                                                Ten promising startups present their innovative solutions to industry challenges. 
+                                                Audience and judges will select the most promising ventures.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <i class="fas fa-clock"></i>
+                                        <span>4:00 PM - 5:30 PM</span>
+                                        <span class="accordion-title">Closing Keynote: Charting the Path Forward</span>
+                                        <i class="fas fa-chevron-down accordion-icon"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <div class="accordion-details">
+                                            <p><strong>Speaker:</strong> Maria Gonzalez, Tech Visionary</p>
+                                            <p><strong>Location:</strong> Main Auditorium</p>
+                                            <p>
+                                                A visionary look at how the innovations discussed during Innovate 2025 will converge 
+                                                to create new possibilities and transform our world in the coming decades.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Event Location</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Tech Innovation Center, 123 Future Avenue, Silicon Valley
+                </p>
+            </div>
+            
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="map-info">
+                    <p class="map-info-title">Tech Innovation Center</p>
+                    <p class="map-info-address">123 Future Avenue, Silicon Valley</p>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="map-directions">
+                        Get Directions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Attendees Say</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Hear from past participants about their experience at our previous events.
+                </p>
+            </div>
+            
+            <div class="testimonials-container">
+                <div class="testimonials-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left testimonial-quote"></i>
+                            <p>"Innovate Conference was a game-changer for our team. The connections we made and insights we gained have directly influenced our product roadmap for the next two years."</p>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-avatar">
+                                <img src="https://via.placeholder.com/100" alt="Sarah Johnson">
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="testimonial-name">Sarah Johnson</p>
+                                <p class="testimonial-role">CTO, TechVision</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left testimonial-quote"></i>
+                            <p>"As a first-time attendee, I was blown away by the quality of speakers and the collaborative atmosphere. I left with new partnerships and a fresh perspective on our challenges."</p>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-avatar">
+                                <img src="https://via.placeholder.com/100" alt="Michael Chen">
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="testimonial-name">Michael Chen</p>
+                                <p class="testimonial-role">Founder, NextGen Startup</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left testimonial-quote"></i>
+                            <p>"The workshops were incredibly valuable - practical, hands-on, and led by true experts in the field. I implemented what I learned immediately upon returning to work."</p>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-avatar">
+                                <img src="https://via.placeholder.com/100" alt="Priya Patel">
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="testimonial-name">Priya Patel</p>
+                                <p class="testimonial-role">AI Research Lead, GlobalTech</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left testimonial-quote"></i>
+                            <p>"The networking opportunities alone were worth the price of admission. I connected with partners that have accelerated our go-to-market strategy by months."</p>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-avatar">
+                                <img src="https://via.placeholder.com/100" alt="David Rodriguez">
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="testimonial-name">David Rodriguez</p>
+                                <p class="testimonial-role">Product Manager, InnovateCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left testimonial-quote"></i>
+                            <p>"The diverse perspectives and inclusive environment made this event stand out. The organizers clearly put thought into creating a conference where everyone could contribute and learn."</p>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-avatar">
+                                <img src="https://via.placeholder.com/100" alt="Emma Wilson">
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="testimonial-name">Emma Wilson</p>
+                                <p class="testimonial-role">UX Director, DesignForward</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonials-controls">
+                    <button class="testimonial-control prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="testimonial-control next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="section-header light">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Have questions about Innovate 2025? Our team is here to help.
+                </p>
+            </div>
+            
+            <div class="form-container">
+                <div class="card dark" id="contact-card">
+                    <div class="card-header">
+                        <h3>Contact Us</h3>
+                        <p class="card-subtitle">Have questions? We're here to help.</p>
+                    </div>
+                    <div class="card-content">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="Your name" required class="dark-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" name="email" placeholder="your@email.com" required class="dark-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-subject">Subject</label>
+                                <input type="text" id="contact-subject" name="subject" placeholder="How can we help?" required class="dark-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" name="message" placeholder="Your message..." rows="4" required class="dark-input"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">
+                                Send Message <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="card dark success-card hidden" id="contact-success">
+                    <div class="card-content text-center">
+                        <i class="fas fa-check-circle success-icon"></i>
+                        <h3>Message Sent!</h3>
+                        <p>
+                            Thank you for contacting us. We'll get back to you as soon as possible.
+                        </p>
+                        <button class="btn btn-outline light" id="send-another">Send Another Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">Innovate 2025</h3>
+                    <p class="footer-text">Where visionaries shape tomorrow's technology.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i><span class="sr-only">Twitter</span></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i><span class="sr-only">LinkedIn</span></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i><span class="sr-only">Instagram</span></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Program</a></li>
+                        <li><a href="#">Speakers</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                        <li><a href="#">Sponsorship</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact</h3>
+                    <ul class="footer-contact">
+                        <li>info@innovate2025.com</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>123 Future Avenue, Silicon Valley</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Innovate Conference. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
